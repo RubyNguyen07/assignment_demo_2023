@@ -16,7 +16,7 @@ Right-click docker-compose.yml and run
 ## API Documentation 
 <ol>
     <li> Ping: Check if the server is running </li>
-    ```
+    ```bash
         curl -X GET http://localhost:8080/ping
     ```
     Expected response: status 200 
@@ -26,7 +26,7 @@ Right-click docker-compose.yml and run
         }
     ```
     <li> Send message: send message in a chat room </li>
-    ```
+    ```bash
         curl -X POST \
           http://localhost:8080/api/send \
           -H 'Content-Type: application/json' \
@@ -38,7 +38,7 @@ Right-click docker-compose.yml and run
     ```
     Expected response: status 200
     <li> Pull messages: retrieve messages in a chat room from Cursor with Limit and sorting order Reverse (default: False)</li>
-    ```
+    ```bash
         curl -X GET \
           http://localhost:8080/api/pull \
           -H 'Content-Type: application/json' \
