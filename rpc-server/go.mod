@@ -11,15 +11,17 @@ require (
 
 require (
 	github.com/bytedance/gopkg v0.0.0-20220817015305-b879a72dc90f // indirect
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chenzhuoyu/iasm v0.0.0-20230222070914-0b1b64b0e762 // indirect
 	github.com/choleraehyq/pid v0.0.16 // indirect
 	github.com/cloudwego/fastpb v0.0.4 // indirect
 	github.com/cloudwego/frugal v0.1.6 // indirect
 	github.com/cloudwego/netpoll v0.3.2 // indirect
-	github.com/cloudwego/thriftgo v0.2.9 // indirect
+	github.com/cloudwego/thriftgo v0.2.11 // indirect
 	github.com/coreos/go-semver v0.3.0 // indirect
 	github.com/coreos/go-systemd/v22 v22.3.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/pprof v0.0.0-20220608213341-c488b8fa1db3 // indirect
@@ -29,6 +31,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/oleiade/lane v1.0.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
+	github.com/redis/go-redis/v9 v9.0.5 // indirect
 	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/smartystreets/goconvey v1.7.2 // indirect
 	github.com/tidwall/gjson v1.9.3 // indirect
@@ -48,7 +51,7 @@ require (
 	golang.org/x/time v0.0.0-20220411224347-583f2d630306 // indirect
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	google.golang.org/grpc v1.41.0 // indirect
-	google.golang.org/protobuf v1.28.1 // indirect
+	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 

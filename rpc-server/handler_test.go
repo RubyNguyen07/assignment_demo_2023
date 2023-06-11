@@ -23,7 +23,27 @@ func TestIMServiceImpl_Send(t *testing.T) {
 			name: "success",
 			args: args{
 				ctx: context.Background(),
-				req: &rpc.SendRequest{},
+				req: &rpc.SendRequest{
+					Message: &rpc.Message{
+						Chat:   chatName,
+						Text:   "test",
+						Sender: "test1",
+					},
+				},
+			},
+			wantErr: nil,
+		},
+		{
+			name: "success",
+			args: args{
+				ctx: context.Background(),
+				req: &rpc.SendRequest{
+					Message: &rpc.Message{
+						Chat:   "test1:test2",
+						Text:   "very random message?@",
+						Sender: "test1",
+					},
+				},
 			},
 			wantErr: nil,
 		},
@@ -36,4 +56,5 @@ func TestIMServiceImpl_Send(t *testing.T) {
 			assert.NotNil(t, got)
 		})
 	}
+
 }
