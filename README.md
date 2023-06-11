@@ -10,6 +10,7 @@ Requirements: https://bytedance.sg.feishu.cn/docx/P9kQdDkh5oqG37xVm5slN1Mrgle
 Make sure you have Docker installed:
 - Windows: https://docs.docker.com/desktop/install/windows-install/
 - MacOS: https://docs.docker.com/desktop/install/mac-install/
+
 Right-click docker-compose.yml and run
 
 ## API Documentation 
