@@ -14,42 +14,52 @@ Make sure you have Docker installed:
 Right-click docker-compose.yml and run
 
 ## API Documentation 
-<ol>
-    <li> Ping: Check if the server is running </li>
-    ```bash
-        curl -X GET http://localhost:8080/ping
-    ```
-    Expected response: status 200 
-    ```json
-        {
-            "message": "pong"
-        }
-    ```
-    <li> Send message: send message in a chat room </li>
-    ```bash
-        curl -X POST \
-          http://localhost:8080/api/send \
-          -H 'Content-Type: application/json' \
-          -d '{
-            "Chat": "jenny:lisa",
-            "Text": "Hello World",
-            "Sender": "jenny"
-        }'
-    ```
-    Expected response: status 200
-    <li> Pull messages: retrieve messages in a chat room from Cursor with Limit and sorting order Reverse (default: False)</li>
-    ```bash
-        curl -X GET \
-          http://localhost:8080/api/pull \
-          -H 'Content-Type: application/json' \
-          -d '{
-            "Chat": "jenny:lisa",
-            "Cursor": 0,
-            "Limit": 20,
-            "Reverse": false
-        }'
-    ```
-    Expected response: status 200
+
+### Ping: Check if the server is running 
+    
+```bash
+curl -X GET http://localhost:8080/ping
+```
+
+Expected response: status 200        
+```json
+{
+    "message": "pong"
+}
+```
+
+### Send message: send message in a chat room
+
+```bash
+curl -X POST \
+  http://localhost:8080/api/send \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "Chat": "jenny:lisa",
+    "Text": "Hello World",
+    "Sender": "jenny"
+}'
+```
+    
+Expected response: status 200
+    
+### Pull messages: retrieve messages in a chat room from Cursor with Limit and sorting order Reverse (default: False)
+    
+```bash
+curl -X GET \
+  http://localhost:8080/api/pull \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "Chat": "jenny:lisa",
+    "Cursor": 0,
+    "Limit": 20,
+    "Reverse": false
+}'
+```
+
+Expected response: status 200
+    
+```json
     {
       "messages": [
         {
@@ -60,8 +70,10 @@ Right-click docker-compose.yml and run
         }, ...
       ]
     }
-    > Note that the order of members in a chat is not important 
-</ol> 
+```
+    
+> Note that the order of members in a chat is not important 
+
 
 ## Tech stack 
 - Golang 
